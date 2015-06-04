@@ -3,10 +3,13 @@ Rails.application.routes.draw do
 
   get '/signup' => 'users#new'
   
-  resource :users
-  
+  resource :users  
   resource :sessions, only: [:new, :create, :destroy] 
-
+  resource :causes
+  resource :interests
+  resource :deeds
+  resource :organizations
+  resource :users_deeds
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

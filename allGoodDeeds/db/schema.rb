@@ -17,15 +17,23 @@ ActiveRecord::Schema.define(version: 20150603225506) do
   enable_extension "plpgsql"
 
   create_table "causes", force: :cascade do |t|
+    t.string "type"
   end
 
   create_table "deeds", force: :cascade do |t|
+    t.integer "organization_id"
+    t.string  "type"
+    t.string  "description"
   end
 
   create_table "interests", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "cause_id"
   end
 
   create_table "organizations", force: :cascade do |t|
+    t.string  "name"
+    t.integer "cause_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,6 +46,8 @@ ActiveRecord::Schema.define(version: 20150603225506) do
   end
 
   create_table "users_deeds", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "deed_id"
   end
 
 end
