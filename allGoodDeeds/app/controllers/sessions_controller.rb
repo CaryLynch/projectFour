@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
 
         # and redirect to that user's settings page
-        redirect_to 'http://www.google.com'
+        redirect_to "/users/#{user.id}"
       else
         # the email/password is wrong!
         @message = "This email and password combination does not exist."

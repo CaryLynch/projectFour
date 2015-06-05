@@ -14,7 +14,12 @@ class UsersController < ApplicationController
     password = params["password"]
     @user = User.create(name: name, location: location, email: email, password: password)
     session["user_id"] = @user.id
-    redirect_to ("http://www.google.com")
+    redirect_to "/"
+  end
+
+  def show
+    @user = User.find(params[:id])
+    render :show
   end
 
   def edit
