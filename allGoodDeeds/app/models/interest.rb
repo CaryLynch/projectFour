@@ -1,5 +1,5 @@
 class Interest < ActiveRecord::Base
-  belongs_to :users
-  belongs_to :causes
+  belongs_to :user
+  belongs_to :cause
 
 end

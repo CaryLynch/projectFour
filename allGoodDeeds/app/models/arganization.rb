@@ -1,3 +1,3 @@
 class Organization <ActiveRecord::Base
-  belongs_to :deeds
+  belongs_to :deed
 end
