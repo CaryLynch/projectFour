@@ -1,4 +1,4 @@
-class Users_deed < ActiveRecord::Base
+class UsersDeed < ActiveRecord::Base
   belongs_to :user
   belongs_to :deed
 end
