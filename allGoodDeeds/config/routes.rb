@@ -5,17 +5,16 @@ Rails.application.routes.draw do
   
   resources :sessions, only: [:new, :create, :destroy] 
 
+scope module: :users do
   resources :users do
-    
     resources :causes, only: [:new, :create, :show] do
       resources :organizations, only: :index
     end
     resources :deeds, only: [:new, :create, :show] do
       resources :organizations, only: :index
-    end
-  
+    end 
   end 
-
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

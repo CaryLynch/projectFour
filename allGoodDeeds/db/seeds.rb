@@ -25,22 +25,22 @@ User.create({
 
 
 Cause.create({
-    type:"Wildlife"
+    category:"Wildlife"
   })
 Cause.create({
-    type:"Climate Change"
+    category:"Climate Change"
   })
 Cause.create({
-    type:"Water Conservation"
+    category:"Water Conservation"
   })
 Cause.create({
-    type:"Vetrans"
+    category:"Vetrans"
   })
 Cause.create({
-    type:"AIDS"
+    category:"AIDS"
   })
 Cause.create({
-    type:"Poverty"
+    category:"Poverty"
   })
 
 
@@ -73,32 +73,32 @@ Interest.create({
 
 Deed.create({
     organization_id:4,
-    type:"volunteer",
+    category:"volunteer",
     description:"Spend some time doing something for the vetrans."
   })
 Deed.create({
     organization_id:1,
-    type:"fundraise",
+    category:"fundraise",
     description:"Raise some money to help save the dolphins."
   })
 Deed.create({
     organization_id:5,
-    type:"donate",
+    category:"donate",
     description:"Pledge some money to help fight AIDS."
   })
 Deed.create({
     organization_id:2,
-    type:"join an event",
+    category:"join an event",
     description:"Pledge to join the Clean the Bay Day."
   })
 Deed.create({
     organization_id:6,
-    type:"shop",
+    category:"shop",
     description:"Buy some sweet swag."
   })
 Deed.create({
     organization_id:3,
-    type:"write a legislator",
+    category:"write a legislator",
     description:"Write a letter asking to help conserve water."
   })
 
@@ -125,4 +125,30 @@ Organization.create({
 Organization.create({
     name:"ONE",
     cause_id:6
+  })
+
+
+Users_deed.create({
+    user_id:1,
+    deed_id:4
+  })
+Users_deed.create({
+    user_id:2,
+    deed_id:6
+  })
+Users_deed.create({
+    user_id:4,
+    deed_id:5
+  })
+Users_deed.create({
+    user_id:3,
+    deed_id:1
+  })
+Users_deed.create({
+    user_id:5,
+    deed_id:2
+  })
+Users_deed.create({
+    user_id:6,
+    deed_id:3
   })

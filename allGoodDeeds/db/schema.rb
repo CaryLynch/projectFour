@@ -17,12 +17,12 @@ ActiveRecord::Schema.define(version: 20150603225506) do
   enable_extension "plpgsql"
 
   create_table "causes", force: :cascade do |t|
-    t.string "type"
+    t.string "category"
   end
 
   create_table "deeds", force: :cascade do |t|
     t.integer "organization_id"
-    t.string  "type"
+    t.string  "category"
     t.string  "description"
   end
 
