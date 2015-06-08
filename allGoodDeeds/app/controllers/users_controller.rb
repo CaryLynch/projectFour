@@ -18,10 +18,14 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @cause = @user.causes
-    @deed = @user.deeds
-    render :show
+    if session[:user_id] != nil # the client is logged in
+      @user = User.find(params[:id])
+      @cause = @user.causes
+      @deed = @user.deeds
+      render :show
+    else
+      redirect_to '/'
+    end
   end
 
   def edit
