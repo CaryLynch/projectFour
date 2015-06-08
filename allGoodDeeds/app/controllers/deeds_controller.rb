@@ -1,17 +1,18 @@
 class DeedsController < ApplicationController
+
   def index
-    @user = session[:user_id]
+    @user = current_user
     @deeds = Deed.all
     render :index
   end
 
-  def create
-    @user = session[:user_id]
+  def show
+    @user = current_user
+    @deed = Deed.find(params[:id])
 
-    # @deed = Deed.create({user_id: params[:user_id], deed_id: params[:deed_id]})
+    @organizations = Organization.all
 
-    redirect_to "/users/#{@user}"  
+    render :show
   end
+
 end
-
-

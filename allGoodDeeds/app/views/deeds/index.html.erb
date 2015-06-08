@@ -1,4 +1,5 @@
-<!-- ------------------Page that shows List of all Deeds and let's you add them to your Profile------------------- -->
+<!-- ------------------Page that shows List of all Deeds------------------- -->
+
 
 <!doctype html>
 <html lang="en">
@@ -69,17 +70,11 @@
                     <i class="fa fa-rocket"></i>
                     All the Deeds You Can Commit To:
                 </h3>
-
                 <% @deeds.each do |deed| %>
-                   <ul><form action="/users/<%= @user %>/deeds" method="post">
-                        <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-
-                       <h3 id= "<%= deed.id %>">Deed: <%= deed.category %></h3><button>Add Deed</button>
-                   </form>
+                   <ul><h3>Deed: <a href="/deeds/<%= deed.id %>"> <%= deed.category %></a></h3>
 
                    <li><p>Description: <%= deed.description %></p></li></ul>
                 <% end %>
-
 
             </div>
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">

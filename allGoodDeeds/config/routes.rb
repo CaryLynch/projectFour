@@ -6,11 +6,12 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy] 
 
   resources :users do
-    resources :deeds, only: [:create]
+    resources :users_deeds, only: [:create]
     resources :interests, only: [:create]
+
   end 
   resources :causes, only: [:index, :show]
-  resources :deeds, only: [:index]
+  resources :deeds, only: [:index, :show]
 
 # Rails.application.routes.draw do
 #   root 'sessions#new'
