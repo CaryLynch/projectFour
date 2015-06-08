@@ -7,8 +7,9 @@ class DeedsController < ApplicationController
 
   def create
     @user = session[:user_id]
-    @deed = Deed.id
-    render :index
+
+    # @deed = Deed.create({user_id: params[:user_id], deed_id: params[:deed_id]})
+
     redirect_to "/users/#{@user}"  
   end
 end

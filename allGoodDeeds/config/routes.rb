@@ -7,8 +7,8 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :deeds, only: [:create]
+    resources :interests, only: [:create]
   end 
-
   resources :causes, only: [:index, :show]
   resources :deeds, only: [:index]
 

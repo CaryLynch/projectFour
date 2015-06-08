@@ -67,10 +67,15 @@
 
                 <h3 class="content-subhead">
                     <i class="fa fa-rocket"></i>
-                    These are the organizations for <%= @cause.category %>:
+
+                    <form action="/users/<%= @user.id %>/interests" method="post">
+                        <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />    
+
+                        Add this Cause to your Profile: <button value="<%= @cause.id %>"><%= @cause.category %>:</button></form>
                 </h3>
 
                 <% @organization.each do |organization| %>
+                   <h3>These are the organizations for <%= @cause.category %>:</h3>
                    <p>Organization: <%= organization.name %> </p>
                 <% end %>
 
