@@ -97,8 +97,9 @@ a.pure-button-primary {
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
 .home-menu {
-    background: #FF0066;
-    opacity: 0.5;
+    background: #193B5C;
+    opacity: 0.7;
+
 }
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
@@ -108,7 +109,8 @@ a.pure-button-primary {
 }
 
 .home-menu .pure-menu-heading {
-    color: black;
+    color: white;
+    opacity: 1;
     font: helvetica;
     font-weight: 400;
     font-size: 200%;
@@ -133,10 +135,11 @@ a.pure-button-primary {
  * -- SPLASH STYLES --
  * This is the blue top section that appears on the page.
  */
+  
 
 .splash-container {
-    background-image: url(light-graphics_GyTNDB9d.jpg);
-/*    background: #1abc9c; */
+    background: url('volcano.jpg');
+    background-size:cover;
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
@@ -173,8 +176,10 @@ a.pure-button-primary {
 /* This is the subheading that appears on the blue section */
 .splash-subhead {
     color: white;
-    letter-spacing: 0.05em;
-    opacity: 0.8;
+    font-size: 22px;
+    font-weight: 100;
+/*    letter-spacing: 0.05em;*/
+/*    opacity: 0.8;*/
 }
 
 /*
@@ -215,13 +220,13 @@ a.pure-button-primary {
 
 /* This is the class used for the dark-background areas. */
 .ribbon {
-    background: #2d3e50;
+    background: #304F6C;
     color: #aaa;
 }
 
 /* This is the class used for the footer */
 .footer {
-    background: #111;
+    background: #304F6C;
 }
 
 /*

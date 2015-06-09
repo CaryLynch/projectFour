@@ -40,7 +40,7 @@
         <a class="pure-menu-heading" href="/">all good deeds</a>
 
         <ul class="pure-menu-list">
-              <li class="pure-menu-item">
+              <li class="pure-menu-item pure-menu-selected">
               <%= form_tag "/sessions" do %>
               <%= label_tag :email %>
               <%= email_field_tag :email %></li>
@@ -61,57 +61,42 @@
 <div class="splash-container">
     <div class="splash">
         <h1 class="splash-head">ready to make a difference?<br>of course you are!</h1>
-        <h3 class="splash-subhead">
-            all good deeds<br>where all the small things matter.
-        </h3>
-        <p>
-
-
-
-<!--             <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a> -->
-<!-- <h2> No Account? Sign up! </h2> -->
-        <a href="/signup" class="pure-button pure-button-primary" class="button hvr-float">Sign Up, Make a Difference </a>
+        <h2 class="splash-subhead">
+        all good deeds<br>where all the small things matter.
+        </h2>
+        <p><a href="/signup" class="pure-button pure-button-primary" class="button hvr-float">Sign Up, Make a Difference </a>
         </p>
     </div>
 </div>
 
 <div class="content-wrapper">
     <div class="content">
-        <h2 class="content-head is-center">Come down here and let's get to work making a difference!</h2>
+        <h2 class="content-head is-center">All Good Things makes it easy for you to share your love for good.</h2>
 
         <div class="pure-g">
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+            <div class="l-box pure-u-1 pure-u-md-1-3">
 
                 <h3 class="content-subhead">
-                    <i class="fa fa-rocket"></i>
-                    Get Started Quickly
+                    <i class="fa fa-check-square-o"></i>
+                    Choose the Causes You Care About Most
                 </h3>
                 <p>
                     Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
                 </p>
             </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-mobile"></i>
-                    Responsive Layouts
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-th-large"></i>
-                    Modular
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+            <div class="l-box pure-u-1 pure-u-md-1-3">
                 <h3 class="content-subhead">
                     <i class="fa fa-check-square-o"></i>
-                    Plays Nice
+                    Commit to Doing Good Deeds for Your Causes
+                </h3>
+                <p>
+                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                </p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-3">
+                <h3 class="content-subhead">
+                    <i class="fa fa-check-square-o"></i>
+                    Share All the Good Things You've Done
                 </h3>
                 <p>
                     Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
@@ -121,73 +106,24 @@
     </div>
 
     <div class="ribbon l-box-lrg pure-g">
-        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
-            <img class="pure-img-responsive" alt="File Icons" width="300" src="img/common/file-icons.png">
+        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-1-5">
+            <img class="pure-img-responsive" width="500px" src="https://download.unsplash.com/29/great-plain.jpg">
         </div>
-        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
-
-            <h2 class="content-head content-head-ribbon">Laboris nisi ut aliquip.</h2>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor.
-            </p>
+        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-1-5">
+            <img class="pure-img-responsive" width="500px" src="https://download.unsplash.com/29/great-plain.jpg">
+        </div>
+        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-1-5">
+            <img class="pure-img-responsive" width="500px" src="https://download.unsplash.com/29/great-plain.jpg">
         </div>
     </div>
 
     <div class="content">
-        <h2 class="content-head is-center">Dolore magna aliqua. Uis aute irure.</h2>
-
-        <div class="pure-g">
-            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-                <form class="pure-form pure-form-stacked">
-                    <fieldset>
-
-                        <label for="name">Your Name</label>
-                        <input id="name" type="text" placeholder="Your Name">
-
-
-                        <label for="email">Your Email</label>
-                        <input id="email" type="email" placeholder="Your Email">
-
-                        <label for="password">Your Password</label>
-                        <input id="password" type="password" placeholder="Your Password">
-
-                        <button type="submit" class="pure-button">Sign Up</button>
-                    </fieldset>
-                </form>
-            </div>
-
-            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-                <h4>Contact Us</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                </p>
-
-                <h4>More Information</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
-        </div>
-
+        <h3 class="content-head is-center">It is every man's obligation to put back into the world at least the equivalent of what he takes out of it.</h3><h5 class="content-head is-center">- Albert Einstein</h5>
     </div>
 
     <div class="footer l-box is-center">
-        View the source of this layout to learn more. Made with love by the YUI Team.
+        AllGoodDeed.org Copyright 2015 Site Design: cSadauskasDesign
     </div>
 
 </div>
-
-
-
-
-
-
 </body>
