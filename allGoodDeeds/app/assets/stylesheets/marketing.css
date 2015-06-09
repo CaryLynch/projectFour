@@ -175,9 +175,9 @@ a.pure-button-primary {
 
 /* This is the subheading that appears on the blue section */
 .splash-subhead {
-    color: white;
+    color: #001A4D;
     font-size: 22px;
-    font-weight: 100;
+    font-weight: 700;
 /*    letter-spacing: 0.05em;*/
 /*    opacity: 0.8;*/
 }

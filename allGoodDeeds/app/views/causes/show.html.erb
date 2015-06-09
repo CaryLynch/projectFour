@@ -29,127 +29,67 @@
 
     <div class="splash-container">
         <div class="splash">
-            <h1 class="splash-head">Hello there!</h1>
-            <h3 class="splash-subhead">We're gonna do big things!</h3>
-            <p><a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a></p>
+            <h1 class="splash-head">Support Your Cause</h1>
+            <h3 class="splash-subhead">It's what you care about. It's what we care about.</h3>
+            <p><a href="/deeds" class="pure-button pure-button-primary">Add Deeds to Support Your Cause</a></p>
         </div>
     </div>
 
     <div class="content-wrapper">
         <div class="content">
             <h2 class="content-head is-center">Come down here and let's get to work making a difference!</h2>
+
             <div class="pure-g">
-                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <div class="l-box pure-u-1 pure-u-md-1-3">
                     <h3 class="content-subhead">
-                        <i class="fa fa-rocket"></i>
-
-                        <!--form to persist causes to the interests table-->
-
+                        
                         <form action="/users/<%= @user.id %>/interests" method="post">
-                        <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />Add this Cause to your Profile:
-                        <input name="cause_id" type="hidden" value="<%= @cause.id %>" /><button type="submit"><%= @cause.category %></button></form></h3>
+                        
+                        <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />Support this Cause by adding it to your Profile!</h3>
 
-                        <% @organization.each do |organization| %>
-                           <h3>These are the organizations for <%= @cause.category %>:</h3>
-                           <p>Organization: <%= organization.name %> </p>
-                        <% end %>
+                        <input name="cause_id" type="hidden" value="<%= @cause.id %>" /><button type="submit"><%= @cause.category %></button></form>
+                </div>
 
-                </div>
-                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <div class="l-box pure-u-1 pure-u-md-1-3">
                     <h3 class="content-subhead">
-                        <i class="fa fa-mobile"></i>
-                        Change this line
-                    </h3>
+                         <i class="fa fa-check-square-o"></i>
+                            <% @organization.each do |organization| %>
+                               These are the organizations that support <%= @cause.category %>:</h3>
+                               <p>Organization: <%= organization.name %> </p>
+                            <% end %>
                 </div>
-                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                    <h3 class="content-subhead">
-                        <i class="fa fa-th-large"></i>
-                        Modular
-                    </h3>
-                    <p>
-                        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                    </p>
-                </div>
-                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+
+                <div class="l-box pure-u-1 pure-u-md-1-3">
                     <h3 class="content-subhead">
                         <i class="fa fa-check-square-o"></i>
-                        Plays Nice
+                            Learn More About How to Support <%= @cause.category %>!
                     </h3>
-                    <p>
-                        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                    </p>
+                        <p>
+                            When you add deeds to your profile, you're making a commitment to do great things for causes you care about most! So, <a href="/deeds">be sure to add deeds</a> that support the causes you care about most!
+                        </p>
                 </div>
             </div>
         </div>
 
-        <div class="ribbon l-box-lrg pure-g">
-            <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
-                <img class="pure-img-responsive" alt="File Icons" width="300" src="img/common/file-icons.png">
-            </div>
-            <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
-
-                <h2 class="content-head content-head-ribbon">Laboris nisi ut aliquip.</h2>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor.
-                </p>
-            </div>
+    <div class="ribbon l-box-lrg pure-g">
+        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+            <img class="pure-img-responsive" width="600px" src="https://download.unsplash.com/29/great-plain.jpg">
         </div>
-
-        <div class="content">
-            <h2 class="content-head is-center">Dolore magna aliqua. Uis aute irure.</h2>
-
-            <div class="pure-g">
-                <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-                    <form class="pure-form pure-form-stacked">
-                        <fieldset>
-
-                            <label for="name">Your Name</label>
-                            <input id="name" type="text" placeholder="Your Name">
-
-
-                            <label for="email">Your Email</label>
-                            <input id="email" type="email" placeholder="Your Email">
-
-                            <label for="password">Your Password</label>
-                            <input id="password" type="password" placeholder="Your Password">
-
-                            <button type="submit" class="pure-button">Sign Up</button>
-                        </fieldset>
-                    </form>
-                </div>
-
-                <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-                    <h4>Contact Us</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
-                    </p>
-
-                    <h4>More Information</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-            </div>
-
+        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+            <img class="pure-img-responsive" width="600px" src="https://download.unsplash.com/28/gulls-in-a-row.JPG">
         </div>
-
-        <div class="footer l-box is-center">
-            View the source of this layout to learn more. Made with love by the YUI Team.
+        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+            <img class="pure-img-responsive" width="600px" src="https://download.unsplash.com/23/lions-tigers-and-leopards-oh-my.JPG">
         </div>
-
     </div>
 
+    <div class="content">
+        <h3 class="content-head is-center">It is every man's obligation to put back into the world at least the equivalent of what he takes out of it.</h3><h5 class="content-head is-center">- Albert Einstein</h5>
+    </div>
 
+    <div class="footer l-box is-center">
+        AllGoodDeeds.org Copyright 2015 Site Design: cSadauskasDesign
+    </div>
 
-
-
-
+</div>
 </body>
